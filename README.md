@@ -1,24 +1,43 @@
-# README
+# Description
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a very simplified version of the Remesh application. This app has 3 different models.
 
-Things you may want to cover:
+### Conversations
+Conversations have messages threads.
 
-* Ruby version
+### Messages
+Messages can have many thoughts or comments attached to them.
 
-* System dependencies
+### Thoughts
+Thoughts are attached to Messages and related to conversations through Messages.
 
-* Configuration
+The main functionality of the app is to view and create new Conversations, Messages, and Thoughts. In addition, there is a search functionality that gives users the ability to search conversations by conversation title.
 
-* Database creation
+# Set Up
 
-* Database initialization
+This App uses Ruby 3.0.0 and Rails 6.1.0. The App also uses a postgreSQL database.
 
-* How to run the test suite
+1. Clone down the repo
 
-* Services (job queues, cache servers, search engines, etc.)
+`git clone git@github.com:zachholcomb/remesh_project.git`
 
-* Deployment instructions
+2. Initial Install of App
 
-* ...
+  - Navigate to the repository with `cd remesh_project`
+  - Run `bundle install` to install all packages the project uses
+ 
+3. Database Set Up
+
+  - Run `rails db:create` (Creates database)
+  - Run `rails db:migrate` (Creates database tables)
+  - Run `rails db:seed` (Seeds database with test data)
+  
+4. To interact with the Application
+
+  - Run `rails s` (starts Rails development server)
+  - With this running in your terminal, you can now navigate to localhost:3000 in your browser.
+  
+4. To Run the Test Suite
+  
+  - Run `bundle exec rspec`
+  - If set up correctly, you should have 23 passing tests!
