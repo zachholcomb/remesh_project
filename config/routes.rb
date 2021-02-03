@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :conversations, only: [:index, :show]
+  resources :conversations, except: [:delete, :update]
 end
