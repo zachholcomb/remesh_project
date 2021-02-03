@@ -1,0 +1,25 @@
+<div>
+  <div>
+    <h1>Conversation: <%= @message.conversation.title %></h1>
+  </div>
+  <div>
+    <p><%= @message.text %></p>
+  </div>
+  <div>
+    <ul>
+      <% @message.thoughts.each do |thought| %>
+        <li><%= thought.text %></li>
+      <% end %>
+    </ul>
+    <%= 
+      form_tag(
+        "/conversations/#{@message.conversation.id}/messages/#{@message.id}/thoughts", 
+        method: :post
+        ) do 
+    %>
+      <%= label_tag :text %>
+      <%= text_field_tag :text %>
+      <%= button_tag 'Add Thought' %>
+    <% end %>
+  </div>
+</div>

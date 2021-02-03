@@ -10,7 +10,18 @@
             <li><%= thought.text %></li>
           <% end %>
         </ul>
+        <div>
+          <%= link_to "Comment", "/conversations/#{@conversation.id}/messages/#{message.id}" %>
+        </div>
       </div>
+    <% end %>
+  </div>
+  <div>
+    <h1>Join the conversation</h1>
+    <%= form_tag("/conversations/#{@conversation.id}/messages", method: :post) do %>
+      <%= label_tag :text %>
+      <%= text_field_tag :text %>
+      <%= button_tag 'Add Message' %>
     <% end %>
   </div>
 </div>
