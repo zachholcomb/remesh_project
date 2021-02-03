@@ -1,5 +1,6 @@
 FactoryBot.define do
-  factory :thoughts do
-    text { Faker::Hipster.paragraph }
+  factory :thought do
+    message
+    text { Faker::TvShows::SiliconValley.quote }
   end
 end
