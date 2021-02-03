@@ -3,11 +3,12 @@
   <div>
     <% @conversation.messages.each do |message| %>
       <div id="message-<%= message.id %>">
-        <%= message.text %>
-        <%= message.created_at %>
+        <%= message.text %> - <%= message.created_at %>
         <ul>
           <% message.thoughts.each do |thought| %>
-            <li><%= thought.text %></li>
+            <li>
+              <p><%= thought.text %> - <%= thought.created_at %></p>
+            </li>
           <% end %>
         </ul>
         <div>

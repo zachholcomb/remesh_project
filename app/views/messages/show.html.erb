@@ -3,12 +3,13 @@
     <h1>Conversation: <%= @message.conversation.title %></h1>
   </div>
   <div>
+    <h3>Message Thread</h3>
     <p><%= @message.text %></p>
   </div>
   <div>
     <ul>
       <% @message.thoughts.each do |thought| %>
-        <li><%= thought.text %></li>
+        <li><%= thought.text %> - <%= thought.created_at %> </li>
       <% end %>
     </ul>
     <%= 

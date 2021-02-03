@@ -12,7 +12,7 @@
     <% if @conversations %>
       <ul>
         <% @conversations.each do |convo| %>
-          <li><%= link_to "#{convo.title}",  conversation_path(convo.id)%></li>
+          <li><%= link_to "#{convo.title}",  conversation_path(convo.id)%> <%= convo.start_date %></li>
         <% end %>
       </ul>
     <% end %>
