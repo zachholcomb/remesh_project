@@ -42,7 +42,7 @@ This App uses Ruby 3.0.0 and Rails 6.1.0. The App also uses a postgreSQL databas
 If you run into an issue with opening your app `Webpacker::Manifest::MissingEntryError in Conversations#index` when opening the app, this issue is a [documented problem](https://github.com/rails/webpacker/issues/1295) with webpack and Rails and can be fixed running the following commands:
     
    - Close your Rails server with `Ctrl-C`
-   - Then run the command `yarn add webpack-cli -D` (This installs the missing webpack-cli that Rails needs to start the dev server)
+   - Then run the command `bundle exec rails webpacker:install` (This installs the missing webpack package)
    - Then rerun your server with `rails s` and navigate to `localhost:3000`
   
 4. To Run the Test Suite
@@ -56,6 +56,7 @@ If you run into an issue with opening your app `Webpacker::Manifest::MissingEntr
 This was a really fun project. Main things I would continue working:
 
  - Pagination for the conversations index page
- - Pagination for message threads in a conversation's show page 
+ - Pagination for message threads in a conversation's show page
+ - Other optimizations for the conversation show page as well
  - Styling -- lots of it
  - Autocomplete functionality for the search bar would be cool as well
