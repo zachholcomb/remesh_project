@@ -1,3 +1,16 @@
 <div>
   <h1><%= @conversation.title %></h1>
+  <div>
+    <% @conversation.messages.each do |message| %>
+      <div id="message-<%= message.id %>">
+        <%= message.text %>
+        <%= message.created_at %>
+        <ul>
+          <% message.thoughts.each do |thought| %>
+            <li><%= thought.text %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
 </div>
