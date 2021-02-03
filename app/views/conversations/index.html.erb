@@ -1,0 +1,14 @@
+<div>
+  <div>
+    <h2>All Conversations</h2>
+  </div>
+  <div>
+    <% if @conversations %>
+      <ul>
+        <% @conversations.each do |convo| %>
+          <li><%= link_to "#{convo.title}",  conversation_path(convo.id)%></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>
