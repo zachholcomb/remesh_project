@@ -1,0 +1,20 @@
+<div>
+  <h1>Your Search Results</h1>
+  <% unless @results.empty? %>
+    <% @results.each do |convo| %>
+      <div>
+        <h3><%= link_to convo.title, conversation_path(convo.id) %></h3>
+        <p><%= convo.start_date %></p>
+      </div>
+    <% end %>
+  <% else %>
+    <h3>No Conversations match your criteria, search again?</h3>
+  <% end %>
+  <div class="search">
+    <h2>Search Again</h2>
+    <%= form_tag "/conversations/search", method: :get do %>
+      <%= text_field_tag(:search, params[:search]) %>
+      <%= submit_tag("Search") %>
+    <% end %>
+  </div>
+</div>

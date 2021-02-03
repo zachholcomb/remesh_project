@@ -2,6 +2,12 @@
   <div>
     <h2>All Conversations</h2>
   </div>
+  <div class="search">
+    <%= form_tag "/conversations/search", method: :get do %>
+      <%= text_field_tag(:search, params[:search]) %>
+      <%= submit_tag("Search") %>
+    <% end %>
+  </div>
   <div>
     <% if @conversations %>
       <ul>
