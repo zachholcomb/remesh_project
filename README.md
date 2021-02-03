@@ -35,9 +35,20 @@ This App uses Ruby 3.0.0 and Rails 6.1.0. The App also uses a postgreSQL databas
 4. To interact with the Application
 
   - Run `rails s` (starts Rails development server)
-  - With this running in your terminal, you can now navigate to localhost:3000 in your browser.
+  - With this running in your terminal, you can now navigate to `localhost:3000` in your browser.
+  
+  `************** NOTE ON WEBPACK **************`
+  If you run into an issue with opening your app `Webpacker::Manifest::MissingEntryError in Conversations#index` when opening the app, this issue is a [documented problem](https://github.com/rails/webpacker/issues/1295) with webpack and Rails and can be fixed running the following commands:
+    - Close your Rails server with `Ctrl-C`
+    - Then run the command `yarn add webpack-cli -D` (This installs the missing webpack-cli that Rails needs to start the dev server)
+    - Then rerun your server with `rails s` and navigate to `localhost:3000`
   
 4. To Run the Test Suite
   
   - Run `bundle exec rspec`
   - If set up correctly, you should have 23 passing tests!
+  
+  
+# Reflections
+
+This was a really fun project!
