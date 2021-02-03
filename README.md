@@ -15,7 +15,10 @@ The main functionality of the app is to view and create new Conversations, Messa
 
 # Set Up
 
-This App uses Ruby 3.0.0 and Rails 6.1.0. The App also uses a postgreSQL database.
+This App uses Ruby 2.7.2 and Rails 6.1.0. The App also uses a postgreSQL database.
+
+### Note on Ruby Version 
+I started the app in Ruby 3.0.0 but I ended up changing to 2.7.2 because I realized 3.0.0 hasn't yet been added to the normal ruby package manager either rvm or rbenv.
 
 1. Clone down the repo
  
