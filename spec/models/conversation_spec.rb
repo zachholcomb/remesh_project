@@ -8,6 +8,6 @@ RSpec.describe Conversation, type: :model do
 
   describe 'relationships' do
     it { should have_many :messages }
-    it { should have_many :thoughts }
+    it { should have_many(:thoughts).through(:messages) }
   end
 end
